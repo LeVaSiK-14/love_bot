@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+
+  bot:
+    container_name: love_bot
+    restart: unless-stopped
+    build:
+      context: .
+    command: sh -c "python bot.py"
+    ports:
+      - "8001:8001"
